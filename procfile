@@ -1,1 +1,1 @@
-web: python totalprice.py
+web: gunicorn totalprice:app
