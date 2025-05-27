@@ -11,7 +11,7 @@ app = Flask(__name__)
 SERVICE_ACCOUNT_JSON = os.environ.get('SERVICE_ACCOUNT_JSON')
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 SHEET_ID = '1sVuQGZjHToaryPNNSOytHNZPnGHFqzc2XfbDGsOxRSI'
-SHEET_NAME = 'pizza_price'
+SHEET_NAME = 'PIZZAghl'
 
 if not SERVICE_ACCOUNT_JSON:
     raise Exception("SERVICE_ACCOUNT_JSON not found in environment variables")
@@ -46,7 +46,7 @@ def parse_toppings(topping_text):
 def home():
     return "Pizza Price Calculator API is running!"
 
-@app.route('/calculate_price', methods=['POST'])
+@app.route('/total_price', methods=['POST'])
 def calculate_price():
     request_json = request.get_json()
 
